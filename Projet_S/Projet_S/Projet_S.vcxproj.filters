@@ -19,12 +19,15 @@
     <Filter Include="Source Files\Inventory">
       <UniqueIdentifier>{4d6b0fd9-e4e3-41dd-a005-b7e72d6e2071}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Source Files\Chapters">
+      <UniqueIdentifier>{73fb6875-042d-4b8f-9ecd-3c24c8ed06f3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Chapters">
+      <UniqueIdentifier>{81ad91bf-a1f9-44bb-b4e9-fee769522e80}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Projet_S.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="Chapters.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="Armor.cpp">
@@ -42,11 +45,14 @@
     <ClCompile Include="Weapon.cpp">
       <Filter>Source Files\Inventory</Filter>
     </ClCompile>
+    <ClCompile Include="Chapter.cpp">
+      <Filter>Source Files\Chapters</Filter>
+    </ClCompile>
+    <ClCompile Include="Chapters.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Chapters.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="Armor.h">
       <Filter>Header Files\Inventory</Filter>
     </ClInclude>
@@ -61,6 +67,12 @@
     </ClInclude>
     <ClInclude Include="Weapon.h">
       <Filter>Header Files\Inventory</Filter>
+    </ClInclude>
+    <ClInclude Include="Chapter.h">
+      <Filter>Header Files\Chapters</Filter>
+    </ClInclude>
+    <ClInclude Include="Chapters.h">
+      <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

@@ -1,13 +1,13 @@
 #pragma once
 #include <map>
 #include <string>
+#include <vector>
 
 class Chapters
 {
 protected:
-	std::map<int, std::string> chapters;
+	std::vector<Chapters> chapters;
 public:
-	//Methods
-	std::map<int, std::string> GetChapters();
+	//Add chapter to chapters vector
 };
 
