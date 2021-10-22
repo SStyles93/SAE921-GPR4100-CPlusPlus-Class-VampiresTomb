@@ -1,3 +1,4 @@
+#include <algorithm>
 #include <iostream>
 #include "Bag.h"
 #include "Item.h"
@@ -13,8 +14,12 @@ int main()
 	Weapon weapon("theWeapon");
 	bag.AddItem(weapon);
 	Armor armor("Armor");
-	bag.AddItem((armor));
+	bag.AddItem(armor);
 	Other other("other");
 	bag.AddItem(other);
-	bag.RemoveItem(other);
+	bag.RemoveItem(test);
+
+	bag.PrintAllItems();
+	
+
 }

@@ -2,24 +2,24 @@
 #include <string>
 class Character
 {
+protected:
+	int m_health_points;
+	int m_attack;
+	std::string m_name;
+
 public:
+	//Constructors
 	Character(
 		int health_points,
 		int attack,
 		const std::string& name);
+
+	//Methods
 	void Attack(Character& enemy) const;
 	bool IsDead() const;
-
-public:
-	void SetHealthPoints(int health_points) { health_points_ = health_points; }
-	int GetHealthPoints() const { return health_points_; }
-	int GetAttack() const { return attack_; }
-	const std::string& GetName() const { return m_name; }
-	
-protected:
-	int health_points_;
-	int attack_;
-	std::string m_name;
-	
+	void SetHealthPoints(int health_points);
+	int GetHealthPoints() const;
+	int GetAttack() const;
+	const std::string& GetName() const;
 };
 

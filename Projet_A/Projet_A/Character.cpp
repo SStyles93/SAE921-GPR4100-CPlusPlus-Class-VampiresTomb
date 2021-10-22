@@ -1,18 +1,19 @@
 #include "Character.h"
 
+//Constructor
 Character::Character(
 	int health_points,
 	int attack,
 	const std::string& name) :
-	health_points_(health_points),
-	attack_(attack),
-	m_name(name) {}
+	m_health_points(health_points),
+	m_attack(attack),
+	m_name(name){}
 
+//Methods
 void Character::Attack(Character& enemy) const
 {
 	
 }
-
 bool Character::IsDead() const
 {
 	if (GetHealthPoints() <= 0)
@@ -21,15 +22,20 @@ bool Character::IsDead() const
 	}
 	return false;
 }
-
-void Character::Psi(Character& character) const
+void Character::SetHealthPoints(int health_points)
 {
-	
+	m_health_points = health_points;
 }
-
-void Character::Agility(Character& character) const
+int Character::GetHealthPoints() const
 {
-	
+	return m_health_points;
 }
-
+int Character::GetAttack() const
+{
+	return m_attack;
+}
+const std::string& Character::GetName() const
+{
+	return m_name;
+}
 

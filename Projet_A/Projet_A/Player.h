@@ -3,23 +3,34 @@
 #include "Character.h"
 class Player : public Character
 {
+protected:
+	int m_psi_points;
+	int m_agility_points_;
+	int m_gold;
+
 public:
+	//Constructor
 	Player(
+		int health_points,
+		int attack_points,
 		int psi_points,
 		int agility_points,
 		int gold,
 		const std::string& name);
-	void Psi(Character& character) const;
+	
+	//Methods
+	void SetPsi(int psi_points);
+	void SetAgility(int agility_points);
+	int GetGold()const;
+	int GetPsi()const;
+	int GetAgility()const;
+	void Flee();
+
+	//
+	//No constructor needed for psi, agility or gold
+	/*void Psi(Character& character) const;
 	void Agility(Character& character) const;
-	void Flee(Character& character) const;
-	int Gold(Character& inventory) const;
-public:
-	int getPsi(int psi_points) { psi_points_ = psi_points; }
-	int getAgility(int agility_points) { agility_points_ = agility_points; }
-	int GetGold() { return gold_; }
-protected:
-	int psi_points_;
-	int agility_points_;
-	int gold_;
+	int Gold(Character& inventory) const;*/
+	//^^^^^^^^^^^TO BE REMOVED^^^^^^^^^^^^^^
 };
 
