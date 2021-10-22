@@ -3,7 +3,9 @@
 
 class Other : public Item
 {
+	using Item::Item;
 public:
-	Other(const std::string& name);
+	//Other ctor may be used
+	//Other(const std::string& name);
 };
 

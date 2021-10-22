@@ -1,4 +1,5 @@
 #include "Other.h"
 
-Other::Other(const std::string& name) : Item(name){}
+//Other ctor may be used
+//Other::Other(const std::string& name) : Item(name){}
 

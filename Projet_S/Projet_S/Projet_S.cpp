@@ -8,16 +8,16 @@
 
 int main()
 {
-	Item test("name");
+	Item test("I");
 	Bag bag;
 	bag.AddItem(test);
-	Weapon weapon("theWeapon");
+	Weapon weapon("Am");
 	bag.AddItem(weapon);
-	Armor armor("Armor");
+	Armor armor("not");
 	bag.AddItem(armor);
-	Other other("other");
+	Other other("Working");
 	bag.AddItem(other);
-	bag.RemoveItem(test);
+	bag.RemoveItem(armor);
 
 	bag.PrintAllItems();
 	

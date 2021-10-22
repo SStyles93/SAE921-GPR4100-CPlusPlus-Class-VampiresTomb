@@ -1,4 +1,5 @@
 #include "Armor.h"
 
-Armor::Armor(const std::string& name) : Item(name){}
+//Armor ctor may be used
+//Armor::Armor(const std::string& name) : Item(name){}
 

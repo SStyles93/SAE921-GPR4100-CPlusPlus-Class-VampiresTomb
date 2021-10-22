@@ -3,7 +3,10 @@
 
 class Armor : public Item
 {
+	//Using Item ctor
+	using Item::Item;
 public:
-	Armor(const std::string& name);
+	//Armor ctor maybe used
+	//Armor(const std::string& name);
 };
 

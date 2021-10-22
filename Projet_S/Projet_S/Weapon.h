@@ -3,7 +3,9 @@
 
 class Weapon : public Item
 {
+	using Item::Item;
 public:
-	Weapon(const std::string& name);
+	//Weapon ctor may be used
+	//Weapon(const std::string& name);
 };
 
