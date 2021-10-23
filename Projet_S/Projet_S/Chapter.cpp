@@ -2,21 +2,9 @@
 
 //Constructor
 Chapter::Chapter(const int& chapterIndex, std::string content)
-: m_content(std::move(content)), m_chapterIndex(chapterIndex)
-{
-	m_chapter.emplace(m_chapterIndex, m_content);
-}
-
+ : m_content(std::move(content)), m_chapterIndex(chapterIndex){}
 //Methods
-std::string Chapter::GetContent(int chapterIndex) const
+std::string Chapter::GetContent() const
 {
-	for (auto& chapter : m_chapter)
-	{
-		if (chapterIndex == chapter.first)
-		{
-			return  chapter.second;
-		}
-	}
-	return "There is no chapter with that Index";
+	return m_content;
 }
-

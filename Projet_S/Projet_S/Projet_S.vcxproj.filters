@@ -48,8 +48,8 @@
     <ClCompile Include="Chapter.cpp">
       <Filter>Source Files\Chapters</Filter>
     </ClCompile>
-    <ClCompile Include="Book.cpp">
-      <Filter>Source Files</Filter>
+    <ClCompile Include="Story.cpp">
+      <Filter>Source Files\Chapters</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -71,8 +71,8 @@
     <ClInclude Include="Chapter.h">
       <Filter>Header Files\Chapters</Filter>
     </ClInclude>
-    <ClInclude Include="Book.h">
-      <Filter>Header Files</Filter>
+    <ClInclude Include="Story.h">
+      <Filter>Header Files\Chapters</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
