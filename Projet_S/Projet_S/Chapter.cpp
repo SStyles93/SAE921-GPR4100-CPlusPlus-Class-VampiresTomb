@@ -1,8 +1,8 @@
 #include "Chapter.h"
 
 //Constructor
-Chapter::Chapter(const int& chapterIndex, std::string content)
- : m_content(std::move(content)), m_chapterIndex(chapterIndex){}
+Chapter::Chapter(std::string content)
+ : m_content(content){}
 //Methods
 std::string Chapter::GetContent() const
 {

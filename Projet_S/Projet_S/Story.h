@@ -9,6 +9,6 @@ protected:
 public:
 	//Methods
 	std::string GetContent(int chapterIndex) const;
-	void AddChapter(Chapter&);
+	void AddChapter(Chapter& chapter);
 };
 

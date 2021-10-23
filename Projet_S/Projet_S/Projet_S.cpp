@@ -3,7 +3,9 @@
 #include "Bag.h"
 #include "Item.h"
 #include "Armor.h"
+#include "Chapter.h"
 #include "Other.h"
+#include "Story.h"
 #include "Weapon.h"
 
 int main()
@@ -20,6 +22,12 @@ int main()
 	bag.RemoveItem(armor);
 
 	bag.PrintAllItems();
-	
+	//TEST
+	//Chapter chapter1("Introduction");
+	//Chapter chapter2("Dice roll");
+	//Story story;
+	//story.AddChapter(chapter1);
+	//story.AddChapter(chapter2);
+	//std::cout << story.GetContent(1);
 
 }
