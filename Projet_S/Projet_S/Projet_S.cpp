@@ -1,10 +1,10 @@
 #include <algorithm>
 #include <iostream>
-#include "Bag.h"
-#include "Item.h"
 #include "Armor.h"
+#include "Bag.h"
 #include "Chapter.h"
 #include "Other.h"
+#include "Item.h"
 #include "Story.h"
 #include "Weapon.h"
 
