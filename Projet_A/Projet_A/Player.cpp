@@ -16,13 +16,25 @@ Character(health_points, attack_points, name)
 }
 
 //Methods
-void Player::SetPsi(int psi_points)
+void Player::SetAttack(int attack_points)
 {
-	m_psi_points = psi_points;
+	m_attack = attack_points;
 }
 void Player::SetAgility(int agility_points)
 {
 	m_agility_points_ = agility_points;
+}
+void Player::SetGold(int gold)
+{
+	m_gold = gold;
+}
+void Player::SetPsi(int psi_points)
+{
+	m_psi_points = psi_points;
+}
+int Player::GetAgility()const
+{
+	return  m_agility_points_;
 }
 int Player::GetGold()const
 {
@@ -31,10 +43,6 @@ int Player::GetGold()const
 int Player::GetPsi()const
 {
 	return m_psi_points;
-}
-int Player::GetAgility()const
-{
-	return  m_agility_points_;
 }
 void Player::Flee()
 {

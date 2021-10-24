@@ -23,8 +23,8 @@ int main()
 
 	bag.PrintAllItems();
 	//TEST
-	//Chapter chapter1("Introduction");
-	//Chapter chapter2("Dice roll");
+	//Chapter chapter1("Test1");
+	//Chapter chapter2("Test2");
 	//Story story;
 	//story.AddChapter(chapter1);
 	//story.AddChapter(chapter2);

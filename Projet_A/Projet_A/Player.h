@@ -19,11 +19,13 @@ public:
 		const std::string& name);
 	
 	//Methods
-	void SetPsi(int psi_points);
+	void SetAttack(int attack_points);
 	void SetAgility(int agility_points);
+	void SetGold(int gold);
+	void SetPsi(int psi_points);
+	int GetAgility()const;
 	int GetGold()const;
 	int GetPsi()const;
-	int GetAgility()const;
 	void Flee();
 
 	//
