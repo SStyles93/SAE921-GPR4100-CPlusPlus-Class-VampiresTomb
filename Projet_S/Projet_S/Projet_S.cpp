@@ -22,12 +22,12 @@ int main()
 	bag.RemoveItem(armor);
 
 	bag.PrintAllItems();
-	//TEST
-	//Chapter chapter1("Test1");
-	//Chapter chapter2("Test2");
-	//Story story;
-	//story.AddChapter(chapter1);
-	//story.AddChapter(chapter2);
-	//std::cout << story.GetContent(1);
+	//Test 
+	Chapter chapter1("Test1");
+	Chapter chapter2("Test2");
+	Story story;
+	story.AddChapter(chapter1);
+	story.AddChapter(chapter2);
+	std::cout << story.GetContent(1);
 
 }

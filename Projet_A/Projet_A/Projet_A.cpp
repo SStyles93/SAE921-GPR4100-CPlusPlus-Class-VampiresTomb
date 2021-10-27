@@ -20,10 +20,10 @@ int main()
 
 	std::cout << player.GetHealthPoints()<< " ";
 	std::cout << player.GetAttack() << " ";
+	std::cout << player.GetName() << std::endl;
 	std::cout << player.GetPsi() << " ";
 	std::cout << player.GetAgility() << " ";
 	std::cout << player.GetGold() << " ";
-	std::cout << player.GetName() << std::endl;
 
 	player.SetAgility(100);
 	player.SetPsi(666);
