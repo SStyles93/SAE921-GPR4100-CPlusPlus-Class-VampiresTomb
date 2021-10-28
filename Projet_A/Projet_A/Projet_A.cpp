@@ -8,7 +8,7 @@
 int DiceRoll(time_t seed)
 {
 	int dice;
-	srand(time(nullptr));
+	srand(time(0));
 	dice = (1 + rand() % 6);
 	return dice;
 }
