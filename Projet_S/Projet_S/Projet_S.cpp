@@ -28,6 +28,7 @@ int main()
 	Story story;
 	story.AddChapter(chapter1);
 	story.AddChapter(chapter2);
-	std::cout << story.GetContent(1);
+	std::cout << story.GetContent(1) << std::endl;
+	std::cout << story.GetContent(2) << std::endl;
 
 }
