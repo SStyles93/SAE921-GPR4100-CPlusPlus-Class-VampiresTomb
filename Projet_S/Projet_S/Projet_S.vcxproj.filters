@@ -51,6 +51,9 @@
     <ClCompile Include="Story.cpp">
       <Filter>Source Files\Chapters</Filter>
     </ClCompile>
+    <ClCompile Include="End.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Armor.h">
@@ -73,6 +76,9 @@
     </ClInclude>
     <ClInclude Include="Story.h">
       <Filter>Header Files\Chapters</Filter>
+    </ClInclude>
+    <ClInclude Include="End.h">
+      <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
