@@ -6,7 +6,7 @@ Combat::Combat(const std::string& content,/*ENEMY*/ int successScore, int nextCh
 	m_nextChapterIndex = nextChapterIndex;
 	/*Enemy*/
 }
-void Combat::Trial(int diceRoll) const
+void Combat::Battle(int diceRoll) const
 {
 	if(diceRoll >= m_successScore)
 	{
@@ -21,5 +21,8 @@ void Combat::Lose() const
 {
 	
 }
-
+void Combat::Flee(int diceRoll) const
+{
+	
+}
 

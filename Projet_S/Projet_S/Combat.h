@@ -1,7 +1,6 @@
 #pragma once
 #include "Chapter.h"
 
-
 class Combat : public Chapter
 {
 protected:
@@ -9,9 +8,10 @@ protected:
 public:
 	//Constructor
 	Combat(const std::string&/*,Enemy&*/, int, int);
-	void Trial(int diceRoll) const;
+	void Battle(int diceRoll) const;
 	void Win() const;
 	void Lose() const;
+	void Flee() const;
 
 };
 
