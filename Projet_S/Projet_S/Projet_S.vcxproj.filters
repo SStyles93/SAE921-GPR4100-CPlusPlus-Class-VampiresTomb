@@ -54,6 +54,9 @@
     <ClCompile Include="End.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="Selection.cpp">
+      <Filter>Source Files\Chapters</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Armor.h">
@@ -79,6 +82,9 @@
     </ClInclude>
     <ClInclude Include="End.h">
       <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Selection.h">
+      <Filter>Header Files\Chapters</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
