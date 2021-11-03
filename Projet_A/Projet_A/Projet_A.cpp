@@ -5,12 +5,13 @@
 #include <cstdlib>
 #include <ctime>
 
-int DiceRoll(time_t seed)
+int DiceRoll(time_t* seed)
 {
-	int dice;
-	srand(time(0));
-	dice = (1 + rand() % 6);
-	return dice;
+	srand(time(seed));
+	const int dice1 = (1 + rand() % 6);
+	srand(time(seed + 1));
+	const int dice2 = (1 + rand() % 6);
+	return dice1 + dice2;
 }
 
 int main()
@@ -18,10 +19,10 @@ int main()
 	Character character(20, 20, "I");
 	Enemy enemy(10, 10, "AM");
 	Player player(10, 0, 1, 3, 2000, "The");
-	////Test diceroll and improve
-	//Player player2(0, 0, 0, 0, 0, "The test dummy");
-	//player2.SetAttack(DiceRoll(0) + DiceRoll(0)+1);
-	//std::cout << player2.GetAttack() << std::endl;
+	//Test diceroll and improve
+	Player player2(0, 0, 0, 0, 0, "The test dummy");
+	player2.SetAttack(DiceRoll(0));
+	std::cout << player2.GetAttack() << std::endl;
 
 
 	////TEST
