@@ -5,6 +5,7 @@ class Chapter
 {
 protected:
 	std::string m_content;
+	int m_nextChapterIndex;
 public:
 	//Constructor
 	Chapter(std::string content);

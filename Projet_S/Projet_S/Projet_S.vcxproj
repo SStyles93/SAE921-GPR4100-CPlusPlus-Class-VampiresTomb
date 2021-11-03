@@ -141,6 +141,7 @@
   <ItemGroup>
     <ClCompile Include="Armor.cpp" />
     <ClCompile Include="Bag.cpp" />
+    <ClCompile Include="Combat.cpp" />
     <ClCompile Include="End.cpp" />
     <ClCompile Include="Selection.cpp" />
     <ClCompile Include="Story.cpp" />
@@ -153,6 +154,7 @@
   <ItemGroup>
     <ClInclude Include="Armor.h" />
     <ClInclude Include="Bag.h" />
+    <ClInclude Include="Combat.h" />
     <ClInclude Include="End.h" />
     <ClInclude Include="Selection.h" />
     <ClInclude Include="Story.h" />
