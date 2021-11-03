@@ -1,15 +1,19 @@
 #pragma once
-#include <vector>
-
+#include <map>
+#include <iostream>
 #include "Chapter.h"
 class Selection : public Chapter
 {
+	using Chapter::Chapter;
 protected:
-	std::vector<Chapter> chapters_;
-	
+	std::map<int, Chapter> m_chapters;
 public:
-	Selection(const std::string& name);
+	//Constructor
+	
+	//Methods
+	void AddChapter(int, Chapter&);
 	void Select();
+	
 	
 	
 };
