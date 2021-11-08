@@ -144,7 +144,6 @@
     <ClCompile Include="Combat.cpp" />
     <ClCompile Include="End.cpp" />
     <ClCompile Include="Selection.cpp" />
-    <ClCompile Include="Story.cpp" />
     <ClCompile Include="Chapter.cpp" />
     <ClCompile Include="Item.cpp" />
     <ClCompile Include="Other.cpp" />
@@ -157,7 +156,6 @@
     <ClInclude Include="Combat.h" />
     <ClInclude Include="End.h" />
     <ClInclude Include="Selection.h" />
-    <ClInclude Include="Story.h" />
     <ClInclude Include="Chapter.h" />
     <ClInclude Include="Item.h" />
     <ClInclude Include="Other.h" />

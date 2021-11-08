@@ -17,7 +17,7 @@ public:
 		int agility_points,
 		int gold,
 		const std::string& name);
-	
+
 	//Methods
 	void SetAttack(int attack_points);
 	void SetAgility(int agility_points);

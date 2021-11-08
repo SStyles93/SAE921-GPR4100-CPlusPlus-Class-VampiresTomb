@@ -5,7 +5,6 @@
 #include "Chapter.h"
 #include "Other.h"
 #include "Item.h"
-#include "Story.h"
 #include "Weapon.h"
 
 int main()
@@ -25,10 +24,4 @@ int main()
 	//Test 
 	Chapter chapter1("Test1");
 	Chapter chapter2("Test2");
-	Story story;
-	story.AddChapter(chapter1);
-	story.AddChapter(chapter2);
-	std::cout << story.GetContent(1) << std::endl;
-	std::cout << story.GetContent(2) << std::endl;
-
 }

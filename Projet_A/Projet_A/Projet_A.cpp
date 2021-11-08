@@ -1,9 +1,9 @@
 #include <iostream>
+#include <cstdlib>
+#include <ctime>
 #include "Character.h"
 #include "Enemy.h"
 #include "Player.h"
-#include <cstdlib>
-#include <ctime>
 
 int DiceRoll(time_t* seed)
 {

@@ -48,9 +48,6 @@
     <ClCompile Include="Chapter.cpp">
       <Filter>Source Files\Chapters</Filter>
     </ClCompile>
-    <ClCompile Include="Story.cpp">
-      <Filter>Source Files\Chapters</Filter>
-    </ClCompile>
     <ClCompile Include="End.cpp">
       <Filter>Source Files\Chapters</Filter>
     </ClCompile>
@@ -78,9 +75,6 @@
       <Filter>Header Files\Inventory</Filter>
     </ClInclude>
     <ClInclude Include="Chapter.h">
-      <Filter>Header Files\Chapters</Filter>
-    </ClInclude>
-    <ClInclude Include="Story.h">
       <Filter>Header Files\Chapters</Filter>
     </ClInclude>
     <ClInclude Include="End.h">
