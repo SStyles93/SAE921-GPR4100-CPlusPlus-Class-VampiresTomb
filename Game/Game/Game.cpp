@@ -40,7 +40,7 @@ int main()
 		0, "Default");
 
 	player.SetName();
-	Chapter chapter1("Your journey starts here hero, are you ready ?");
+	Chapter chapter1("Hello," + player.GetName() +" your journey starts here hero, are you ready ?");
 	Selection firstSelection("You have the choise between\n 1) Crossing a bridge\n 2) Climbing a wall\n 3) Staying at the same place");
 	Chapter chapter2("You have crossed the bridge");
 	Chapter chapter3("You climb the wall in front of you ");
