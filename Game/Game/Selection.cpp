@@ -8,15 +8,18 @@ void Selection::AddChapter(Chapter& chapter)
 
 std::string Selection::Select()
 {
-	std::cout << "select your chapter" << std::endl;
+	
+	std::cout << "Select the desired action \n";
 	std::cin >> m_nextChapterIndex;
 
 	for (const auto& chapter : m_chapters)
 	{
-		if (m_nextChapterIndex == chapter.first)
+		while(m_nextChapterIndex != chapter.first)
 		{
-			return  chapter.second.GetContent();
+			std::cout << "There is no chapter with that Index \n";
+			std::cin >> m_nextChapterIndex;
 		}
+		return  chapter.second.GetContent();
 	}
 	return "There is no chapter with that Index";
 }

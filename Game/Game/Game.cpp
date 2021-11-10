@@ -37,9 +37,11 @@ int main()
 		DiceRoll() + DiceRoll() + 20,
 		0, DiceRoll() + 3,
 		DiceRoll() + 3,
-		0, "Player");
-	Chapter chapter1("Your journey starts here " + player.GetName() + " Are you ready ?");
-	Selection firstSelection("You have the choise between 1)crossing a bridge, 2)climbing a wall, and 3)staying at the same place");
+		0, "Default");
+
+	player.SetName();
+	Chapter chapter1("Your journey starts here hero, are you ready ?");
+	Selection firstSelection("You have the choise between\n 1) Crossing a bridge\n 2) Climbing a wall\n 3) Staying at the same place");
 	Chapter chapter2("You have crossed the bridge");
 	Chapter chapter3("You climb the wall in front of you ");
 	Chapter chapter4("You decide to stay and get killed by a monster");

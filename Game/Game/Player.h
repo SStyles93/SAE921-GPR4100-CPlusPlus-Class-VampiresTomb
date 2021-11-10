@@ -22,6 +22,7 @@ public:
 	void SetAttack(int attack_points);
 	void SetAgility(int agility_points);
 	void SetGold(int gold);
+	void SetName();
 	void SetPsi(int psi_points);
 	int GetAgility()const;
 	int GetGold()const;

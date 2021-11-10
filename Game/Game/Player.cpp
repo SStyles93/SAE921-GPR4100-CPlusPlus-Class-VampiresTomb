@@ -1,5 +1,7 @@
 #include "Player.h"
 
+#include <iostream>
+
 //Constructor
 Player::Player(
 	int health_points,
@@ -27,6 +29,11 @@ void Player::SetAgility(int agility_points)
 void Player::SetGold(int gold)
 {
 	m_gold = gold;
+}
+void Player::SetName()
+{
+	std::cout << "Enter your name\n";
+	std::cin >> m_name;
 }
 void Player::SetPsi(int psi_points)
 {
