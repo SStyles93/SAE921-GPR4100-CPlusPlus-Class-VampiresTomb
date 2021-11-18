@@ -1,0 +1,35 @@
+{
+	"backtrace" : 1,
+	"backtraceGraph" : 
+	{
+		"commands" : 
+		[
+			"add_custom_target"
+		],
+		"files" : 
+		[
+			"Projet_S/CMakeLists.txt"
+		],
+		"nodes" : 
+		[
+			{
+				"file" : 0
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 28,
+				"parent" : 0
+			}
+		]
+	},
+	"id" : "DataTarget-Projet_S::@e7b82bc8163fd03cdfae",
+	"name" : "DataTarget-Projet_S",
+	"paths" : 
+	{
+		"build" : "Projet_S",
+		"source" : "Projet_S"
+	},
+	"sources" : [],
+	"type" : "UTILITY"
+}

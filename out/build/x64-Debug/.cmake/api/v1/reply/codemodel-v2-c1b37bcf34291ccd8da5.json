@@ -1,0 +1,149 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"childIndexes" : 
+					[
+						1,
+						2,
+						3
+					],
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.8"
+					},
+					"projectIndex" : 0,
+					"source" : "."
+				},
+				{
+					"build" : "Game",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.8"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 0,
+					"source" : "Game",
+					"targetIndexes" : 
+					[
+						0,
+						3
+					]
+				},
+				{
+					"build" : "Projet_A",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.8"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 0,
+					"source" : "Projet_A",
+					"targetIndexes" : 
+					[
+						1,
+						4
+					]
+				},
+				{
+					"build" : "Projet_S",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.8"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 0,
+					"source" : "Projet_S",
+					"targetIndexes" : 
+					[
+						2,
+						5
+					]
+				}
+			],
+			"name" : "Debug",
+			"projects" : 
+			[
+				{
+					"directoryIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3
+					],
+					"name" : "SAE921-GRP4100-SFML",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3,
+						4,
+						5
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 1,
+					"id" : "DataTarget-Game::@971b28586fb25e7ff763",
+					"jsonFile" : "target-DataTarget-Game-Debug-1548c2f74b14d83b7860.json",
+					"name" : "DataTarget-Game",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 2,
+					"id" : "DataTarget-Projet_A::@ea9c26482a450f75c202",
+					"jsonFile" : "target-DataTarget-Projet_A-Debug-e13a4a63e8cd754737f5.json",
+					"name" : "DataTarget-Projet_A",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 3,
+					"id" : "DataTarget-Projet_S::@e7b82bc8163fd03cdfae",
+					"jsonFile" : "target-DataTarget-Projet_S-Debug-767b49b61d2795eabb76.json",
+					"name" : "DataTarget-Projet_S",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 1,
+					"id" : "Game::@971b28586fb25e7ff763",
+					"jsonFile" : "target-Game-Debug-43a2eac6bf4c8a5c5384.json",
+					"name" : "Game",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 2,
+					"id" : "Projet_A::@ea9c26482a450f75c202",
+					"jsonFile" : "target-Projet_A-Debug-f507a82db6b11e1bd9b4.json",
+					"name" : "Projet_A",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 3,
+					"id" : "Projet_S::@e7b82bc8163fd03cdfae",
+					"jsonFile" : "target-Projet_S-Debug-f569655bc5015fcea454.json",
+					"name" : "Projet_S",
+					"projectIndex" : 0
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "C:/SAE/921/GPR/SAE921-GPR4100-CPlusPlus-Class-VampiresTomb/out/build/x64-Debug",
+		"source" : "C:/SAE/921/GPR/SAE921-GPR4100-CPlusPlus-Class-VampiresTomb"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 2
+	}
+}

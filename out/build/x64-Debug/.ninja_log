@@ -1,0 +1,14 @@
+# ninja log v5
+1	43	6588660496335370	Game/data/fonts/OctoberCrow.ttf	6d19621d0ef6f44a
+8	48	6588660496335370	Game/data/sprites/wall.jpg	4049ce8dbf0e02e1
+98	906	6588660504926777	Game/CMakeFiles/Game.dir/src/Enemy.cpp.obj	9695876871b1ce75
+48	939	6588660505082990	Game/CMakeFiles/Game.dir/src/Item.cpp.obj	8d9ae9972565dfa8
+105	932	6588660504926777	Game/CMakeFiles/Game.dir/src/Weapon.cpp.obj	43f0cdb275677c7d
+54	940	6588660505082990	Game/CMakeFiles/Game.dir/src/Armor.cpp.obj	3f7ec9617ac82fd6
+111	941	6588660505082990	Game/CMakeFiles/Game.dir/src/Other.cpp.obj	c99528211221b53f
+73	953	6588660505395415	Game/CMakeFiles/Game.dir/src/Character.cpp.obj	c07638096b70444
+118	1076	6588660506645116	Game/CMakeFiles/Game.dir/src/Player.cpp.obj	1ad9917a8389adc3
+60	1158	6588660507426193	Game/CMakeFiles/Game.dir/src/Bag.cpp.obj	cc1303418eb7b584
+8	1037	6588661415661881	Game/CMakeFiles/Game.dir/src/Combat.cpp.obj	bc4c09004c5b9561
+19	1036	6588661415661881	Game/CMakeFiles/Game.dir/src/End.cpp.obj	5101f2fdee71d07c
+14	1044	6588661415818089	Game/CMakeFiles/Game.dir/src/Game.cpp.obj	8810f508a236eeda
