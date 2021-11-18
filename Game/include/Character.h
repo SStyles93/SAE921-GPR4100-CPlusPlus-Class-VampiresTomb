@@ -9,18 +9,17 @@ protected:
 
 public:
 	//Constructors
-	Character();
 	Character(
-		int health_points,
-		int attack,
-		const std::string& name);
+		const std::string& name,
+		int health_points);
 
 	//Methods
-	void Attack(Character& enemy) const;
-	bool IsDead() const;
 	void SetHealthPoints(int health_points);
-	int GetHealthPoints() const;
 	int GetAttack() const;
+	int GetHealthPoints() const;
 	const std::string& GetName() const;
+	void Attack(Character& opponent) const;
+	bool IsDead() const;
+	int DiceRoll();
 };
 

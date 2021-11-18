@@ -9,14 +9,14 @@ protected:
 	int m_gold;
 
 public:
+	
+#pragma region Constructor
 	//Constructor
 	Player(
-		int health_points,
-		int attack_points,
-		int psi_points,
-		int agility_points,
-		int gold,
-		const std::string& name);
+		const std::string& name,
+		int health);
+#pragma endregion
+#pragma region Methods
 
 	//Methods
 	void SetAttack(int attack_points);
@@ -28,5 +28,7 @@ public:
 	int GetGold()const;
 	int GetPsi()const;
 	void Flee();
+	
+#pragma endregion
 };
 

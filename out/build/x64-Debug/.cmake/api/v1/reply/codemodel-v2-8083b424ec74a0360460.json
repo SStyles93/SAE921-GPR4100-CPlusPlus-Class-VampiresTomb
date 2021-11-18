@@ -93,7 +93,7 @@
 				{
 					"directoryIndex" : 1,
 					"id" : "DataTarget-Game::@971b28586fb25e7ff763",
-					"jsonFile" : "target-DataTarget-Game-Debug-1548c2f74b14d83b7860.json",
+					"jsonFile" : "target-DataTarget-Game-Debug-3c2b7378b02cff4f1b31.json",
 					"name" : "DataTarget-Game",
 					"projectIndex" : 0
 				},
@@ -114,7 +114,7 @@
 				{
 					"directoryIndex" : 1,
 					"id" : "Game::@971b28586fb25e7ff763",
-					"jsonFile" : "target-Game-Debug-43a2eac6bf4c8a5c5384.json",
+					"jsonFile" : "target-Game-Debug-a47c9477908005384a5e.json",
 					"name" : "Game",
 					"projectIndex" : 0
 				},

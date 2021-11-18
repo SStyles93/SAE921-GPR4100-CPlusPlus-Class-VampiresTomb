@@ -1,6 +1,6 @@
 #include "Selection.h"
 
-std::string Selection::Select()
+std::string Selection::GetIndex()
 {
 	std::cout << "select your chapter" << std::endl;
 	std::cin >> m_nextChapterIndex;

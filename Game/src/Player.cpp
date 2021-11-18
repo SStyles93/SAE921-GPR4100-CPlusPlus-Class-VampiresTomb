@@ -1,23 +1,35 @@
 #include "Player.h"
-
 #include <iostream>
 
 //Constructor
 Player::Player(
-	int health_points,
-	int attack_points,
-	int psi_points,
-	int agility_points,
-	int gold,
-	const std::string& name) :
-	Character(health_points, attack_points, name)
+	const std::string& name,
+	int health) :
+	Character(name, health)
 {
-	m_psi_points = psi_points;
-	m_agility_points_ = agility_points;
-	m_gold = gold;
+	m_health_points = DiceRoll() + DiceRoll() + 20;
+	m_psi_points = DiceRoll()+3;
+	m_agility_points_ = DiceRoll()+3;
+	m_gold = 0;
 }
 
-//Methods
+#pragma region Methods
+
+#pragma region Getters
+int Player::GetAgility()const
+{
+	return  m_agility_points_;
+}
+int Player::GetGold()const
+{
+	return m_gold;
+}
+int Player::GetPsi()const
+{
+	return m_psi_points;
+}
+#pragma endregion
+#pragma region Setters
 void Player::SetAttack(int attack_points)
 {
 	m_attack = attack_points;
@@ -39,19 +51,10 @@ void Player::SetPsi(int psi_points)
 {
 	m_psi_points = psi_points;
 }
-int Player::GetAgility()const
-{
-	return  m_agility_points_;
-}
-int Player::GetGold()const
-{
-	return m_gold;
-}
-int Player::GetPsi()const
-{
-	return m_psi_points;
-}
+#pragma endregion
+
 void Player::Flee()
 {
 	//Flee
 }
+#pragma endregion

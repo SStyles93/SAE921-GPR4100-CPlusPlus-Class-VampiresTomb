@@ -45,7 +45,8 @@
 			[
 				1,
 				2,
-				3
+				3,
+				4
 			]
 		}
 	],
@@ -67,6 +68,12 @@
 			"backtrace" : 0,
 			"isGenerated" : true,
 			"path" : "out/build/x64-Debug/Game/data/fonts/OctoberCrow.ttf.rule",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 0,
+			"isGenerated" : true,
+			"path" : "out/build/x64-Debug/Game/data/sprites/Vampire.jpg.rule",
 			"sourceGroupIndex" : 1
 		},
 		{

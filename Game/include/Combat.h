@@ -8,6 +8,8 @@ protected:
 	Enemy& m_enemy;
 public:
 	//Constructor
+
+	//Takes a spriteAdress, content, an Enemy, a successScore, and the nextChapterIndex
 	Combat(const std::string, const std::string, Enemy&, int, int );
 	
 	//Methods

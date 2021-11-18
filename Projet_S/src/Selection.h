@@ -12,6 +12,6 @@ public:
 	
 	//Methods
 	void AddChapter(Chapter&);
-	std::string Select();
+	std::string GetIndex();
 };
 

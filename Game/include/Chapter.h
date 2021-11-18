@@ -5,9 +5,6 @@
 class Chapter
 {
 protected:
-	int m_chapterIndex = 0;
-	int m_nextChapterIndex = 0;
-	std::map<const int, Chapter> m_chapterMap;
 	std::string m_spriteAdress;
 	std::string m_content;
 	
@@ -15,23 +12,19 @@ protected:
 	sf::Font m_font;
 	sf::Texture m_texture; 
 	sf::Sprite m_sprite;
+
 public:
+	int m_chapterIndex;
 #pragma region Constructor
 
 	//Chapter(spriteAdress, content)
-	Chapter(const std::string, const std::string);
+	Chapter(std::string, std::string);
 
 #pragma endregion
 #pragma region Methods
 
 	//Draws the chapter
 	void Draw(sf::RenderWindow&);
-	//Draws the next chapter
-	void DrawNextChapter(sf::RenderWindow&);
-	//Adds a chapter to the chapterlist
-	void AddChapter(Chapter&);
-	//Asks for the user to enter a chapter index
-	Chapter Select();
 
 #pragma endregion
 
