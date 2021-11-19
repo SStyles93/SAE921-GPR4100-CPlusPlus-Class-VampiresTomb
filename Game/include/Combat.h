@@ -1,16 +1,25 @@
 #pragma once
 #include "Chapter.h"
 #include "Enemy.h"
+
 class Combat : public Chapter
 {
 protected:
+
 	int m_successScore;
 	Enemy& m_enemy;
+	
 public:
-	//Constructor
 
-	Combat(const std::string, const std::string, Enemy&, int, int );
+#pragma region Constructor
 
+	Combat(const std::string spriteAdress,
+		const std::string content,
+		Enemy& enemy,
+		int successScore,
+		int nextChapterIndex);
+	
+#pragma endregion 
 #pragma region Methods
 	
 	void Battle(int diceRoll);

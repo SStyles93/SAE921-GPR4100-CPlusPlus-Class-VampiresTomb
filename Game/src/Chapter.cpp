@@ -3,8 +3,6 @@
 
 #pragma region Constructor
 
-//Constructor
-
 //Chapter(spriteAdress, content)
 Chapter::Chapter(std::string spriteAdress, std::string content)
 	: m_spriteAdress(spriteAdress), m_content(content)
@@ -24,9 +22,7 @@ Chapter::Chapter(std::string spriteAdress, std::string content)
 #pragma endregion
 #pragma region Methods
 
-//Methods
-
-//Draws the chapter
+//Draws the chapter, takes a "RenderWindow"
 void Chapter::Draw(sf::RenderWindow& window) 
 {
 	window.clear(sf::Color::Black);

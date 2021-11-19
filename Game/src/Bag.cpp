@@ -1,6 +1,7 @@
 #include "Bag.h"
 
-//Methods
+#pragma region Methods
+
 //Adds an Item to the Items with push_back()
 void Bag::AddItem(Item& item)
 {
@@ -36,3 +37,5 @@ std::vector<Item> Bag::GetItems() const
 {
 	return Items;
 }
+
+#pragma endregion 

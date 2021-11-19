@@ -1,17 +1,19 @@
 #include "Character.h"
 
-//Constructor
+#pragma region Constructor
+
 Character::Character(
 	const std::string& name,
-	int health_points) :
+	int health_points, std::string spriteAdress) :
 	m_name(name),
-	m_health_points(health_points)
+	m_health_points(health_points),
+	m_spriteAdress(spriteAdress)
 {
 	m_attack = 0;
 }
-
+#pragma endregion 
 #pragma region Methods
-//Methods
+
 #pragma region Getters
 int Character::GetHealthPoints() const
 {
@@ -35,10 +37,6 @@ void Character::SetHealthPoints(int health_points)
 
 #pragma endregion
 
-void Character::Attack(Character& opponent) const
-{
-	opponent.SetHealthPoints(GetHealthPoints()-GetAttack());
-}
 bool Character::IsDead() const
 {
 	if (GetHealthPoints() <= 0)
@@ -48,10 +46,10 @@ bool Character::IsDead() const
 	return false;
 }
 
-int Character::DiceRoll()
+void Character::Draw(sf::RenderWindow& window) 
 {
-	int dice = (1 + rand() % 6);
-	return dice;
+	window.clear(sf::Color::Black);
+	m_sprite.setPosition(window.getSize().x * 0.25f, window.getSize().y * 1.0f);
+	window.draw(m_sprite);
 }
-
 #pragma endregion
