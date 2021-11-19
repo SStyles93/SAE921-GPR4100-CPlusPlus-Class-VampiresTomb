@@ -4,7 +4,8 @@
 #pragma region Constructor
 
 //Constructor
-//Takes the sprite adress and a texture
+
+//Chapter(spriteAdress, content)
 Chapter::Chapter(std::string spriteAdress, std::string content)
 	: m_spriteAdress(spriteAdress), m_content(content)
 {
@@ -13,7 +14,7 @@ Chapter::Chapter(std::string spriteAdress, std::string content)
 	m_sprite.setTexture(m_texture);
 	m_sprite.setOrigin(sf::Vector2f(m_texture.getSize().y * 0.5f, m_texture.getSize().x * 0.5f));
 	m_sprite.setPosition(0, 0);
-	m_font.loadFromFile("C:/SAE/921/GPR/SAE921-GPR4100-CPlusPlus-Class-VampiresTomb/Game/data/fonts/OctoberCrow.ttf");
+	m_font.loadFromFile("data/fonts/OctoberCrow.ttf");
 	m_text.setFont(m_font);
 	m_text.setString(m_content);
 	m_text.setCharacterSize(48);
@@ -25,6 +26,7 @@ Chapter::Chapter(std::string spriteAdress, std::string content)
 
 //Methods
 
+//Draws the chapter
 void Chapter::Draw(sf::RenderWindow& window) 
 {
 	window.clear(sf::Color::Black);

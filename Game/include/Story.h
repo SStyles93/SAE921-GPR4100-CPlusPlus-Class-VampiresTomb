@@ -13,12 +13,11 @@ public:
 
 #pragma region Methods
 	
-	//Adds a chapter to the chapterlist
 	void AddChapter(Chapter&);
-	void Select();
 	void Play();
-	Chapter GetNextChapter(Chapter& chapter);
+	void Select();
 	Chapter GetChapter();
+	Chapter GetNextChapter(Chapter& chapter);
 
 #pragma endregion
 };

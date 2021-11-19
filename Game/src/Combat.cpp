@@ -1,6 +1,6 @@
 #include "Combat.h"
 
-//Takes a spriteAdress, content, an Enemy, a successScore, and the nextChapterIndex (if successfully killed Enemy)
+//Takes a spriteAdress, content, an Enemy, a successScore, and the nextChapterIndex
 Combat::Combat(
 	const std::string spriteAdress,
 	std::string content,
@@ -10,6 +10,7 @@ Combat::Combat(
 {
 	m_successScore = successScore;
 }
+
 void Combat::Battle(int diceRoll)
 {
 	if (diceRoll >= m_successScore)
@@ -22,10 +23,12 @@ void Combat::Win() const
 {
 	m_enemy.IsDead();
 }
+
 void Combat::Lose() const
 {
 	
 }
+
 void Combat::Flee(int diceRoll) const
 {
 	if (diceRoll >= m_successScore)

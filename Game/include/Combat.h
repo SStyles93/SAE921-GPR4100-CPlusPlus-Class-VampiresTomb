@@ -9,14 +9,16 @@ protected:
 public:
 	//Constructor
 
-	//Takes a spriteAdress, content, an Enemy, a successScore, and the nextChapterIndex
 	Combat(const std::string, const std::string, Enemy&, int, int );
+
+#pragma region Methods
 	
-	//Methods
 	void Battle(int diceRoll);
 	void Win() const;
 	void Lose() const;
 	void Flee(int) const;
+	
+#pragma endregion
 
 };
 

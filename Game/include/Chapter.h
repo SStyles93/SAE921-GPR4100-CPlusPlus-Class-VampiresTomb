@@ -17,13 +17,11 @@ public:
 	int m_chapterIndex;
 #pragma region Constructor
 
-	//Chapter(spriteAdress, content)
 	Chapter(std::string, std::string);
 
 #pragma endregion
 #pragma region Methods
 
-	//Draws the chapter
 	void Draw(sf::RenderWindow&);
 
 #pragma endregion
