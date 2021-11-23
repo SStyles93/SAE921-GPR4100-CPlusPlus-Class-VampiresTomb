@@ -11,12 +11,12 @@
 186	2051	6593727529765721	Game/CMakeFiles/Game.dir/src/Other.cpp.obj	c99528211221b53f
 191	2058	6593727529885404	Game/CMakeFiles/Game.dir/src/Player.cpp.obj	1ad9917a8389adc3
 156	2137	6593727530673286	Game/CMakeFiles/Game.dir/src/Bag.cpp.obj	cc1303418eb7b584
-2	1406	6590150175507623	Game/CMakeFiles/Game.dir/src/Combat.cpp.obj	bc4c09004c5b9561
-14	1313	6590150174570126	Game/CMakeFiles/Game.dir/src/End.cpp.obj	5101f2fdee71d07c
-21	1389	6590150175338066	Game/CMakeFiles/Game.dir/src/Game.cpp.obj	8810f508a236eeda
-8	1354	6590150174988994	Game/CMakeFiles/Game.dir/src/Chapter.cpp.obj	adc98f836cb1068c
+13	948	6593730461225408	Game/CMakeFiles/Game.dir/src/Combat.cpp.obj	bc4c09004c5b9561
+8	1046	6593730462224851	Game/CMakeFiles/Game.dir/src/End.cpp.obj	5101f2fdee71d07c
+20	943	6593730461105739	Game/CMakeFiles/Game.dir/src/Game.cpp.obj	8810f508a236eeda
+2	981	6593730461554527	Game/CMakeFiles/Game.dir/src/Chapter.cpp.obj	adc98f836cb1068c
 1406	2375	6590150177812876	Game/Game.exe	7ad121ac09ece1d2
-26	1392	6590150175358014	Game/CMakeFiles/Game.dir/src/Story.cpp.obj	a56e309d721632eb
+26	1016	6593730461923541	Game/CMakeFiles/Game.dir/src/Story.cpp.obj	a56e309d721632eb
 27	102	6593727510265597	Game/data/sprites/Background/1.jpg	ae5413f48975171d
 11	96	6593727510225700	Game/data/sprites/Objects/garlic.png	475290d6a7a9f9c1
 16	97	6593727510026239	Game/data/sprites/Objects/sword.png	a2d1457028695385
@@ -27,8 +27,3 @@
 50	123	6593727510554826	Game/data/sprites/Vampire/3.png	73a7ae0dbbc3c094
 61	134	6593727510674497	Game/data/sprites/Vampire/2.png	1c5da5f7f633e77c
 71	135	6593727510684472	Game/data/sprites/Vampire/1.png	86be49bf0d87606a
-20	943	6593730461105739	Game/CMakeFiles/Game.dir/src/Game.cpp.obj	8810f508a236eeda
-13	948	6593730461225408	Game/CMakeFiles/Game.dir/src/Combat.cpp.obj	bc4c09004c5b9561
-2	981	6593730461554527	Game/CMakeFiles/Game.dir/src/Chapter.cpp.obj	adc98f836cb1068c
-26	1016	6593730461923541	Game/CMakeFiles/Game.dir/src/Story.cpp.obj	a56e309d721632eb
-8	1046	6593730462224851	Game/CMakeFiles/Game.dir/src/End.cpp.obj	5101f2fdee71d07c

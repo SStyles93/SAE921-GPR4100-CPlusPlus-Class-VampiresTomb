@@ -20,6 +20,7 @@
 class Story 
 {
 private:
+
 	std::map<const int, Chapter> m_chapterMap;
 	Chapter m_currentChapter;
 	int m_chapterCount = 0;

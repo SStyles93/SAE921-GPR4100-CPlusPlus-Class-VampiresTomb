@@ -9,7 +9,7 @@ protected:
 	std::string m_content;
 
 	std::vector<Chapter> m_nextChapters;
-	int m_nextChapterIndex;
+	int m_nextChapterIndex = 0;
 
 #pragma region Graphical
 
