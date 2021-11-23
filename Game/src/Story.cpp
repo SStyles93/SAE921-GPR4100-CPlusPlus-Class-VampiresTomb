@@ -1,34 +1,51 @@
 #include "Story.h"
 
 //Initializes the Story
-void Story::Init() 
+void Story::Init(sf::RenderWindow& window) 
 {
 	Story story;
+	Player player("Name", story.DiceRoll(), "No sprite");
 
-	Chapter chapt1("data/sprites/Vampire.jpg",
+	//Title
+	Chapter Title("data/sprites/Vampire/Title",
 		"This is the first chapter");
-	story.AddChapter(chapt1);
+	story.AddChapter(Title);
 
-	Chapter chapt2("data/sprites/wall.jpg",
-		"This is the second chapter");
-	story.AddChapter(chapt2);
+	//"Door": first selection
+	Chapter door("data/sprites/Background/1.jpg",
+		"You arrive in front of a door");
+	story.AddChapter(door);
+
+	//"The hidden entrance": shortcut with "garlic"
+	Chapter trap("data/sprites/Background/Black.bmp",
+		"You find a little trap");
+	story.AddChapter(trap);
+
+	//"House": is an "End" chapter
+	Chapter house
+	("data/sprites/Background/2.png",
+		"You arrive near a little house...");
+	story.AddChapter(house);
 	
-	Enemy enemy1("The boss", 10, "//ToBeCREATEDandENTERED");
-	
-	Combat combat1("data/sprites/Vampire.jpg",
-		"This is the first combat",
-		enemy1, 5, 2);
-	story.AddChapter(combat1);
+	//"Dungeon" is a combat
+	Chapter dungeon("data/sprites/Background/3.png",
+		"You arrive in a dungeon...");
+	story.AddChapter(dungeon);
 
-	Player player("Name", story.DiceRoll(), "spriteAdress");
+	door.AddNextChapter(trap);
+	door.AddNextChapter(house);
+	door.AddNextChapter(dungeon);
+	door.Select(window);
 
-	//Selection
-
+	//The Boss
+	Enemy boss("Vampire", 10, "data/sprites/Vampire/2.png");
+	//Boss fight
+	Combat BossFight("data/sprites/Background/4.png",
+		"You arrive in a boss fight", boss, 10, 10);
 }
 //Play the story
-void Story::Draw() 
+void Story::Draw(sf::RenderWindow& window) 
 {
-
 }
 //Adds a chapter to the ChapterList
 void Story::AddChapter(Chapter& chapter)
@@ -36,11 +53,6 @@ void Story::AddChapter(Chapter& chapter)
 	chapter.m_chapterIndex = static_cast<int>(m_chapterMap.size() + 1);
 	m_chapterMap.emplace(chapter.m_chapterIndex, chapter);
 	m_chapterCount++;
-}
-//Select the next chapter
-void Story::Select() 
-{
-
 }
 //Gets the next chapter
 Chapter Story::GetChapter() 

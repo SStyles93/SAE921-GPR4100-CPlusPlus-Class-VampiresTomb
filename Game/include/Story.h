@@ -23,7 +23,7 @@ private:
 	std::map<const int, Chapter> m_chapterMap;
 	Chapter m_currentChapter;
 	int m_chapterCount = 0;
-	int m_wantedChapterIndex = 1;
+	int m_wantedChapterIndex = 0;
 
 public:
 
@@ -35,9 +35,8 @@ public:
 #pragma region Methods
 	
 	void AddChapter(Chapter& chapter);
-	void Init();
-	void Draw();
-	void Select();
+	void Init(sf::RenderWindow& window);
+	void Draw(sf::RenderWindow& window);
 	Chapter GetChapter();
 	Chapter GetNextChapter(Chapter& chapter);
 	int DiceRoll();

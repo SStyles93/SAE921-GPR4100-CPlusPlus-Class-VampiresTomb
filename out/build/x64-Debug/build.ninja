@@ -78,7 +78,7 @@ build Game\rebuild_cache: phony Game\CMakeFiles\rebuild_cache.util
 #############################################
 # Utility command for DataTarget-Game
 
-build Game\DataTarget-Game: phony Game\CMakeFiles\DataTarget-Game Game\data\fonts\OctoberCrow.ttf Game\data\sprites\Vampire.jpg Game\data\sprites\wall.jpg
+build Game\DataTarget-Game: phony Game\CMakeFiles\DataTarget-Game Game\data\fonts\OctoberCrow.ttf Game\data\sprites\Background\1.jpg Game\data\sprites\Background\2.png Game\data\sprites\Background\3.png Game\data\sprites\Background\4.png Game\data\sprites\Background\Black.bmp Game\data\sprites\Objects\garlic.png Game\data\sprites\Objects\sword.png Game\data\sprites\Vampire\1.png Game\data\sprites\Vampire\2.png Game\data\sprites\Vampire\3.png Game\data\sprites\Vampire\Title.png
 
 # =============================================================================
 # Object build statements for EXECUTABLE target Game
@@ -241,7 +241,7 @@ build Game\edit_cache: phony Game\CMakeFiles\edit_cache.util
 #############################################
 # Phony custom command for Game\CMakeFiles\DataTarget-Game
 
-build Game\CMakeFiles\DataTarget-Game: phony Game\data\fonts\OctoberCrow.ttf Game\data\sprites\Vampire.jpg Game\data\sprites\wall.jpg ..\..\..\Game\data\fonts\OctoberCrow.ttf ..\..\..\Game\data\sprites\Vampire.jpg ..\..\..\Game\data\sprites\wall.jpg
+build Game\CMakeFiles\DataTarget-Game: phony Game\data\fonts\OctoberCrow.ttf Game\data\sprites\Background\1.jpg Game\data\sprites\Background\2.png Game\data\sprites\Background\3.png Game\data\sprites\Background\4.png Game\data\sprites\Background\Black.bmp Game\data\sprites\Objects\garlic.png Game\data\sprites\Objects\sword.png Game\data\sprites\Vampire\1.png Game\data\sprites\Vampire\2.png Game\data\sprites\Vampire\3.png Game\data\sprites\Vampire\Title.png ..\..\..\Game\data\fonts\OctoberCrow.ttf ..\..\..\Game\data\sprites\Background\1.jpg ..\..\..\Game\data\sprites\Background\2.png ..\..\..\Game\data\sprites\Background\3.png ..\..\..\Game\data\sprites\Background\4.png ..\..\..\Game\data\sprites\Background\Black.bmp ..\..\..\Game\data\sprites\Objects\garlic.png ..\..\..\Game\data\sprites\Objects\sword.png ..\..\..\Game\data\sprites\Vampire\1.png ..\..\..\Game\data\sprites\Vampire\2.png ..\..\..\Game\data\sprites\Vampire\3.png ..\..\..\Game\data\sprites\Vampire\Title.png
 
 
 #############################################
@@ -254,20 +254,101 @@ build Game\data\fonts\OctoberCrow.ttf: CUSTOM_COMMAND ..\..\..\Game\data\fonts\O
 
 
 #############################################
-# Custom command for Game\data\sprites\Vampire.jpg
+# Custom command for Game\data\sprites\Background\1.jpg
 
-build Game\data\sprites\Vampire.jpg: CUSTOM_COMMAND ..\..\..\Game\data\sprites\Vampire.jpg
-  COMMAND = cmd.exe /C "cd /D C:\SAE\921\GPR\SAE921-GPR4100-CPlusPlus-Class-VampiresTomb\out\build\x64-Debug\Game && "C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -E copy C:/SAE/921/GPR/SAE921-GPR4100-CPlusPlus-Class-VampiresTomb/Game/data/sprites/Vampire.jpg C:/SAE/921/GPR/SAE921-GPR4100-CPlusPlus-Class-VampiresTomb/out/build/x64-Debug/Game/data/sprites/Vampire.jpg"
-  DESC = Generating data/sprites/Vampire.jpg
+build Game\data\sprites\Background\1.jpg: CUSTOM_COMMAND ..\..\..\Game\data\sprites\Background\1.jpg
+  COMMAND = cmd.exe /C "cd /D C:\SAE\921\GPR\SAE921-GPR4100-CPlusPlus-Class-VampiresTomb\out\build\x64-Debug\Game && "C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -E copy C:/SAE/921/GPR/SAE921-GPR4100-CPlusPlus-Class-VampiresTomb/Game/data/sprites/Background/1.jpg C:/SAE/921/GPR/SAE921-GPR4100-CPlusPlus-Class-VampiresTomb/out/build/x64-Debug/Game/data/sprites/Background/1.jpg"
+  DESC = Generating data/sprites/Background/1.jpg
   restat = 1
 
 
 #############################################
-# Custom command for Game\data\sprites\wall.jpg
+# Custom command for Game\data\sprites\Background\2.png
 
-build Game\data\sprites\wall.jpg: CUSTOM_COMMAND ..\..\..\Game\data\sprites\wall.jpg
-  COMMAND = cmd.exe /C "cd /D C:\SAE\921\GPR\SAE921-GPR4100-CPlusPlus-Class-VampiresTomb\out\build\x64-Debug\Game && "C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -E copy C:/SAE/921/GPR/SAE921-GPR4100-CPlusPlus-Class-VampiresTomb/Game/data/sprites/wall.jpg C:/SAE/921/GPR/SAE921-GPR4100-CPlusPlus-Class-VampiresTomb/out/build/x64-Debug/Game/data/sprites/wall.jpg"
-  DESC = Generating data/sprites/wall.jpg
+build Game\data\sprites\Background\2.png: CUSTOM_COMMAND ..\..\..\Game\data\sprites\Background\2.png
+  COMMAND = cmd.exe /C "cd /D C:\SAE\921\GPR\SAE921-GPR4100-CPlusPlus-Class-VampiresTomb\out\build\x64-Debug\Game && "C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -E copy C:/SAE/921/GPR/SAE921-GPR4100-CPlusPlus-Class-VampiresTomb/Game/data/sprites/Background/2.png C:/SAE/921/GPR/SAE921-GPR4100-CPlusPlus-Class-VampiresTomb/out/build/x64-Debug/Game/data/sprites/Background/2.png"
+  DESC = Generating data/sprites/Background/2.png
+  restat = 1
+
+
+#############################################
+# Custom command for Game\data\sprites\Background\3.png
+
+build Game\data\sprites\Background\3.png: CUSTOM_COMMAND ..\..\..\Game\data\sprites\Background\3.png
+  COMMAND = cmd.exe /C "cd /D C:\SAE\921\GPR\SAE921-GPR4100-CPlusPlus-Class-VampiresTomb\out\build\x64-Debug\Game && "C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -E copy C:/SAE/921/GPR/SAE921-GPR4100-CPlusPlus-Class-VampiresTomb/Game/data/sprites/Background/3.png C:/SAE/921/GPR/SAE921-GPR4100-CPlusPlus-Class-VampiresTomb/out/build/x64-Debug/Game/data/sprites/Background/3.png"
+  DESC = Generating data/sprites/Background/3.png
+  restat = 1
+
+
+#############################################
+# Custom command for Game\data\sprites\Background\4.png
+
+build Game\data\sprites\Background\4.png: CUSTOM_COMMAND ..\..\..\Game\data\sprites\Background\4.png
+  COMMAND = cmd.exe /C "cd /D C:\SAE\921\GPR\SAE921-GPR4100-CPlusPlus-Class-VampiresTomb\out\build\x64-Debug\Game && "C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -E copy C:/SAE/921/GPR/SAE921-GPR4100-CPlusPlus-Class-VampiresTomb/Game/data/sprites/Background/4.png C:/SAE/921/GPR/SAE921-GPR4100-CPlusPlus-Class-VampiresTomb/out/build/x64-Debug/Game/data/sprites/Background/4.png"
+  DESC = Generating data/sprites/Background/4.png
+  restat = 1
+
+
+#############################################
+# Custom command for Game\data\sprites\Background\Black.bmp
+
+build Game\data\sprites\Background\Black.bmp: CUSTOM_COMMAND ..\..\..\Game\data\sprites\Background\Black.bmp
+  COMMAND = cmd.exe /C "cd /D C:\SAE\921\GPR\SAE921-GPR4100-CPlusPlus-Class-VampiresTomb\out\build\x64-Debug\Game && "C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -E copy C:/SAE/921/GPR/SAE921-GPR4100-CPlusPlus-Class-VampiresTomb/Game/data/sprites/Background/Black.bmp C:/SAE/921/GPR/SAE921-GPR4100-CPlusPlus-Class-VampiresTomb/out/build/x64-Debug/Game/data/sprites/Background/Black.bmp"
+  DESC = Generating data/sprites/Background/Black.bmp
+  restat = 1
+
+
+#############################################
+# Custom command for Game\data\sprites\Objects\garlic.png
+
+build Game\data\sprites\Objects\garlic.png: CUSTOM_COMMAND ..\..\..\Game\data\sprites\Objects\garlic.png
+  COMMAND = cmd.exe /C "cd /D C:\SAE\921\GPR\SAE921-GPR4100-CPlusPlus-Class-VampiresTomb\out\build\x64-Debug\Game && "C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -E copy C:/SAE/921/GPR/SAE921-GPR4100-CPlusPlus-Class-VampiresTomb/Game/data/sprites/Objects/garlic.png C:/SAE/921/GPR/SAE921-GPR4100-CPlusPlus-Class-VampiresTomb/out/build/x64-Debug/Game/data/sprites/Objects/garlic.png"
+  DESC = Generating data/sprites/Objects/garlic.png
+  restat = 1
+
+
+#############################################
+# Custom command for Game\data\sprites\Objects\sword.png
+
+build Game\data\sprites\Objects\sword.png: CUSTOM_COMMAND ..\..\..\Game\data\sprites\Objects\sword.png
+  COMMAND = cmd.exe /C "cd /D C:\SAE\921\GPR\SAE921-GPR4100-CPlusPlus-Class-VampiresTomb\out\build\x64-Debug\Game && "C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -E copy C:/SAE/921/GPR/SAE921-GPR4100-CPlusPlus-Class-VampiresTomb/Game/data/sprites/Objects/sword.png C:/SAE/921/GPR/SAE921-GPR4100-CPlusPlus-Class-VampiresTomb/out/build/x64-Debug/Game/data/sprites/Objects/sword.png"
+  DESC = Generating data/sprites/Objects/sword.png
+  restat = 1
+
+
+#############################################
+# Custom command for Game\data\sprites\Vampire\1.png
+
+build Game\data\sprites\Vampire\1.png: CUSTOM_COMMAND ..\..\..\Game\data\sprites\Vampire\1.png
+  COMMAND = cmd.exe /C "cd /D C:\SAE\921\GPR\SAE921-GPR4100-CPlusPlus-Class-VampiresTomb\out\build\x64-Debug\Game && "C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -E copy C:/SAE/921/GPR/SAE921-GPR4100-CPlusPlus-Class-VampiresTomb/Game/data/sprites/Vampire/1.png C:/SAE/921/GPR/SAE921-GPR4100-CPlusPlus-Class-VampiresTomb/out/build/x64-Debug/Game/data/sprites/Vampire/1.png"
+  DESC = Generating data/sprites/Vampire/1.png
+  restat = 1
+
+
+#############################################
+# Custom command for Game\data\sprites\Vampire\2.png
+
+build Game\data\sprites\Vampire\2.png: CUSTOM_COMMAND ..\..\..\Game\data\sprites\Vampire\2.png
+  COMMAND = cmd.exe /C "cd /D C:\SAE\921\GPR\SAE921-GPR4100-CPlusPlus-Class-VampiresTomb\out\build\x64-Debug\Game && "C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -E copy C:/SAE/921/GPR/SAE921-GPR4100-CPlusPlus-Class-VampiresTomb/Game/data/sprites/Vampire/2.png C:/SAE/921/GPR/SAE921-GPR4100-CPlusPlus-Class-VampiresTomb/out/build/x64-Debug/Game/data/sprites/Vampire/2.png"
+  DESC = Generating data/sprites/Vampire/2.png
+  restat = 1
+
+
+#############################################
+# Custom command for Game\data\sprites\Vampire\3.png
+
+build Game\data\sprites\Vampire\3.png: CUSTOM_COMMAND ..\..\..\Game\data\sprites\Vampire\3.png
+  COMMAND = cmd.exe /C "cd /D C:\SAE\921\GPR\SAE921-GPR4100-CPlusPlus-Class-VampiresTomb\out\build\x64-Debug\Game && "C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -E copy C:/SAE/921/GPR/SAE921-GPR4100-CPlusPlus-Class-VampiresTomb/Game/data/sprites/Vampire/3.png C:/SAE/921/GPR/SAE921-GPR4100-CPlusPlus-Class-VampiresTomb/out/build/x64-Debug/Game/data/sprites/Vampire/3.png"
+  DESC = Generating data/sprites/Vampire/3.png
+  restat = 1
+
+
+#############################################
+# Custom command for Game\data\sprites\Vampire\Title.png
+
+build Game\data\sprites\Vampire\Title.png: CUSTOM_COMMAND ..\..\..\Game\data\sprites\Vampire\Title.png
+  COMMAND = cmd.exe /C "cd /D C:\SAE\921\GPR\SAE921-GPR4100-CPlusPlus-Class-VampiresTomb\out\build\x64-Debug\Game && "C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -E copy C:/SAE/921/GPR/SAE921-GPR4100-CPlusPlus-Class-VampiresTomb/Game/data/sprites/Vampire/Title.png C:/SAE/921/GPR/SAE921-GPR4100-CPlusPlus-Class-VampiresTomb/out/build/x64-Debug/Game/data/sprites/Vampire/Title.png"
+  DESC = Generating data/sprites/Vampire/Title.png
   restat = 1
 
 # =============================================================================

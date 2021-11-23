@@ -8,6 +8,9 @@ protected:
 	std::string m_spriteAdress;
 	std::string m_content;
 
+	std::vector<Chapter> m_nextChapters;
+	int m_nextChapterIndex;
+
 #pragma region Graphical
 
 	sf::Text m_text;
@@ -28,7 +31,9 @@ public:
 #pragma endregion
 #pragma region Methods
 
+	void Select(sf::RenderWindow& window);
 	void Draw(sf::RenderWindow& window);
+	void AddNextChapter(Chapter& chapter);
 
 #pragma endregion
 

@@ -32,5 +32,23 @@ void Chapter::Draw(sf::RenderWindow& window)
 	window.draw(m_text);
 	window.display();
 }
-
+void Chapter::AddNextChapter(Chapter& chapter) 
+{
+	m_nextChapters.push_back(chapter);
+}
+void Chapter::Select(sf::RenderWindow& window)
+{
+	std::cin >> m_nextChapterIndex;
+	for (int i = 0; i < m_nextChapters.size(); i++) 
+	{
+		if (i == m_nextChapterIndex) 
+		{
+			m_nextChapters[i].Draw(window);
+		}
+		else 
+		{
+			m_text.setString("There is no chapter with that index");
+		}
+	}
+}
 #pragma endregion

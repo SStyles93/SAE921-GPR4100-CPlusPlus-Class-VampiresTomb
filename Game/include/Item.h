@@ -9,10 +9,12 @@ protected:
 	std::string m_name = "Default";
 
 #pragma region Graphical Variables
+
 	//Graphical
 	std::string m_spriteAdress;
 	sf::Texture m_texture;
 	sf::Sprite m_sprite;
+	
 #pragma endregion 
 
 public:

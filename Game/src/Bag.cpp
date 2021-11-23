@@ -7,6 +7,7 @@ void Bag::AddItem(Item& item)
 {
 	Items.push_back(item);
 }
+
 //Removes an Item from the Items
 void Bag::RemoveItem(Item& item)
 {
@@ -24,6 +25,7 @@ void Bag::RemoveItem(Item& item)
 	}
 
 }
+
 //Loops through Items to GetName()
 void Bag::PrintAllItems()
 {
@@ -32,6 +34,7 @@ void Bag::PrintAllItems()
 		std::cout << Items[index].GetName() << std::endl;
 	}
 }
+
 //Returns the Items vector
 std::vector<Item> Bag::GetItems() const
 {
