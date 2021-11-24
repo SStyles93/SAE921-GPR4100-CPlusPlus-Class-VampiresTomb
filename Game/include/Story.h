@@ -36,7 +36,6 @@ public:
 #pragma region Methods
 	
 	void AddChapter(Chapter& chapter);
-	void Init(sf::RenderWindow& window);
 	void Draw(sf::RenderWindow& window);
 	Chapter GetChapter();
 	Chapter GetNextChapter(Chapter& chapter);

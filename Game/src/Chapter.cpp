@@ -2,7 +2,7 @@
 #include "Chapter.h"
 
 #pragma region Constructor
-
+Chapter::Chapter() {}
 //Chapter(spriteAdress, content)
 Chapter::Chapter(std::string spriteAdress, std::string content)
 	: m_spriteAdress(spriteAdress), m_content(content)

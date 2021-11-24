@@ -25,7 +25,7 @@ public:
 	int m_chapterIndex;
 
 #pragma region Constructor
-
+	Chapter();
 	Chapter(std::string spriteAdress, std::string content);
 
 #pragma endregion

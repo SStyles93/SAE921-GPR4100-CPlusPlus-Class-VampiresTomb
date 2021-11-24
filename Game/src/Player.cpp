@@ -9,7 +9,7 @@ Player::Player(
 	int diceRoll, std::string spriteAdress) :
 	Character(name, diceRoll, spriteAdress)
 {
-	m_health_points = diceRoll + diceRoll + 20;
+	m_health_points = diceRoll + 20;
 	m_psi_points = diceRoll + 3;
 	m_agility_points_ = diceRoll +3;
 	m_gold = 0;
