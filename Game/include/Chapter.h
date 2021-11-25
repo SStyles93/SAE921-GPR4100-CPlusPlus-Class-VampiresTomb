@@ -9,7 +9,7 @@ protected:
 	std::string m_content;
 
 	std::vector<Chapter> m_nextChapters;
-	int m_nextChapterIndex = 0;
+	int m_nextChapterIndex;
 
 #pragma region Graphical
 
@@ -22,7 +22,7 @@ protected:
 
 public:
 
-	int m_chapterIndex;
+	int m_chapterIndex = 0;
 
 #pragma region Constructor
 	Chapter();
@@ -31,12 +31,13 @@ public:
 #pragma endregion
 #pragma region Methods
 
-	void Select(sf::RenderWindow& window);
+	//void Select(sf::RenderWindow& window);
 	void Draw(sf::RenderWindow& window);
-	void AddNextChapter(Chapter& chapter);
-
+	//void AddNextChapter(Chapter& chapter);
+	//Chapter& GetNextChapter(int index);
 #pragma endregion
 
+	//bool operator==(Chapter& chapter) const;
 };
 
 

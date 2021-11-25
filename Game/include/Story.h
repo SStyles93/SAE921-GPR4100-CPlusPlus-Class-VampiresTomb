@@ -21,7 +21,7 @@ class Story
 {
 private:
 
-	std::map<const int, Chapter> m_chapterMap;
+	std::map<int, Chapter> m_chapterMap;
 	Chapter m_currentChapter;
 	int m_chapterCount = 0;
 	int m_wantedChapterIndex = 0;
@@ -37,8 +37,8 @@ public:
 	
 	void AddChapter(Chapter& chapter);
 	void Draw(sf::RenderWindow& window);
-	Chapter GetChapter();
-	Chapter GetNextChapter(Chapter& chapter);
+	Chapter GetChapter(int index);
+	//Chapter GetNextChapter(Chapter& chapter);
 	int DiceRoll();
 
 #pragma endregion

@@ -17,15 +17,15 @@ void Story::AddChapter(Chapter& chapter)
 	m_chapterCount++;
 }
 //Gets the next chapter
-Chapter Story::GetChapter() 
+Chapter Story::GetChapter(int index) 
 {
-	return m_chapterMap.at(m_wantedChapterIndex);
+	return m_chapterMap[index];
 }
-//Gets the chapter after the given one
-Chapter Story::GetNextChapter(Chapter& chapter)
-{
-	return m_chapterMap.at(chapter.m_chapterIndex + 1);
-}
+////Gets the chapter after the given one
+//Chapter Story::GetNextChapter(Chapter& chapter)
+//{
+//	return m_chapterMap.at(chapter.m_chapterIndex + 1);
+//}
 //Returns one "Dice" int between 1 and 6
 int Story::DiceRoll()
 {
