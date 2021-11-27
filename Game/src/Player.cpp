@@ -54,12 +54,12 @@ void Player::SetGold(int gold)
 {
 	m_gold = gold;
 }
-//Sets the "Name"
-void Player::SetName()
-{
-	std::cout << "Enter your name\n";
-	std::cin >> m_name;
-}
+////Sets the "Name"
+//void Player::SetName()
+//{
+//	std::cout << "Enter your name\n";
+//	std::cin >> m_name;
+//}
 //Sets the "Psi"
 void Player::SetPsi(int psi_points)
 {

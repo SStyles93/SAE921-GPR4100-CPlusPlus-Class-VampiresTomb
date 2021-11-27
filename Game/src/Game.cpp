@@ -11,6 +11,8 @@ void ClearConsole()
 #endif
 }
 
+bool gameStarted = true;
+
 int main()
 {
 	sf::Color backgroundColor(sf::Color::Blue);
@@ -21,7 +23,7 @@ int main()
 	//*****************************************************SET-UP*****************************************************
 	
 	// Basic Setup of the window
-	sf::RenderWindow window(sf::VideoMode(3096, 1920), "Vamipre's Tomb");
+	sf::RenderWindow window(sf::VideoMode(1920, 1080), "Vamipre's Tomb");
 	// Vertical sync, framerate
 	window.setVerticalSyncEnabled(true);
 	window.setFramerateLimit(30);
@@ -30,17 +32,21 @@ int main()
 
 	//*****************************************************INIT*****************************************************
 	Story story;
-	Player player("Name", story.DiceRoll() + story.DiceRoll(), "No sprite");
+	Player player("Hero", story.DiceRoll() + story.DiceRoll(), "No sprite");
 
 	//Title
 	Chapter Title("data/sprites/Vampire/Title.png",
-		"This is the first chapter");
+		"Vamipre's Tomb");
+	//Title.SetFontSize(80);
+	Title.SetFontSize(100);
+	Title.SetFontPosition(0.3f, 0.1f);
 	story.AddChapter(Title);
 	currentChapter = story.GetChapter(currentChapterIndex);
 	
 	//"Door": first selection
 	Chapter door("data/sprites/Background/1.jpg",
 		"You arrive in front of a door");
+	door.SetSelection(true);
 	story.AddChapter(door);
 
 	//"The hidden entrance": shortcut with "garlic"
@@ -59,6 +65,10 @@ int main()
 		"You arrive in a dungeon...");
 	story.AddChapter(dungeon);
 
+	door.AddNextChapter(trap);
+	door.AddNextChapter(house);
+	door.AddNextChapter(dungeon);
+
 	//The Boss
 	Enemy boss("Vampire", 10, "data/sprites/Vampire/2.png");
 	//Boss fight
@@ -66,7 +76,7 @@ int main()
 		"You arrive in a boss fight", boss, 10, 10);
 	story.AddChapter(BossFight);
 
-	//*****************************************************INPUTS*****************************************************
+//*****************************************************INPUTS*****************************************************
 	
 	while (window.isOpen())
 	{
@@ -79,7 +89,7 @@ int main()
 
 			switch(event.type)
 			{
-		//***********************************************SCREEN EVENTS**************************************************
+//***********************************************SCREEN EVENTS**************************************************
 			// évènement "fermeture demandée" : on ferme la fenêtre
 			case sf::Event::Closed:
 				window.close();
@@ -97,13 +107,28 @@ int main()
 				window.setView(sf::View(visibleArea));
 				break;
 		
-		//*****************************************************UPDATE*****************************************************
-		//*****************************************************RENDER*****************************************************
+//*****************************************************UPDATE*****************************************************
 			case sf::Event::KeyReleased:
 				if (event.key.code == sf::Keyboard::Enter)
 				{
-					//window.draw(something to draw);
-					currentChapter.Draw(window);
+					if (gameStarted) break;
+//*****************************************************RENDER*****************************************************
+					if (currentChapter.IsSelection())
+					{
+						//TODO: Launch a Selection input method to select Chapters& in the chapter vector
+						
+					}
+					else if (currentChapter.IsCombat()) 
+					{
+						//TODO: Launch a Combat selection input method to select between actions
+					}
+					else 
+					{
+						//Normal case where there is only one nextChapter
+						currentChapterIndex++;
+						currentChapter = story.GetChapter(currentChapterIndex);
+						currentChapter.Draw(window);
+					}	
 				}
 				break;
 
@@ -113,11 +138,10 @@ int main()
 
 		}
 		
-		/*std::cin.get();
-		currentChapter = story.GetChapter(currentChapterIndex);
-		currentChapterIndex++;*/
-		
-		
-
+		//First Draw of the game, displays Title
+		if (gameStarted) {
+			Title.Draw(window);
+			gameStarted = false;
+		}
 	}
 }

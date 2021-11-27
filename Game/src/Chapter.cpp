@@ -17,6 +17,39 @@ Chapter::Chapter(std::string spriteAdress, std::string content)
 	m_text.setString(m_content);
 	m_text.setCharacterSize(48);
 	m_text.setFillColor(sf::Color::Red);
+	m_text.setOrigin(0, 0);
+}
+
+#pragma endregion
+#pragma region Getter/Setter
+
+//TEXT
+void Chapter::SetContent(std::string content) 
+{
+	m_text.setString(m_content);
+}
+void Chapter::SetFontSize(int size) 
+{
+	m_text.setCharacterSize(size);
+}
+void Chapter::SetFontColor(sf::Color color)
+{
+	m_text.setFillColor(color);
+}
+void Chapter::SetFontPosition(float xPos, float yPos) 
+{
+	m_textPosition.x = xPos;
+	m_textPosition.y = yPos;
+}
+
+//CHAPTER
+void Chapter::SetSelection(bool b)
+{
+	m_isSelection = b;
+}
+void Chapter::SetCombat(bool b)
+{
+	m_isCombat = b;
 }
 
 #pragma endregion
@@ -28,29 +61,29 @@ void Chapter::Draw(sf::RenderWindow& window)
 	window.clear(sf::Color::Black);
 	m_sprite.setPosition(window.getSize().x * 0.25f, window.getSize().y * 1.0f);
 	window.draw(m_sprite);
-	m_text.setPosition(window.getSize().x * 0.25f, window.getSize().y * 0.9f);
+	m_text.setPosition(window.getSize().x * m_textPosition.x, window.getSize().y * m_textPosition.y);
 	window.draw(m_text);
 	window.display();
 }
-//void Chapter::AddNextChapter(Chapter& chapter) 
-//{
-//	m_nextChapters.push_back(chapter);
-//}
-//void Chapter::Select(sf::RenderWindow& window)
-//{
-//	std::cin >> m_nextChapterIndex;
-//	for (int i = 0; i < m_nextChapters.size(); i++) 
-//	{
-//		if (i == m_nextChapterIndex) 
-//		{
-//			m_nextChapters[i].Draw(window);
-//		}
-//		else 
-//		{
-//			m_text.setString("There is no chapter with that index");
-//		}
-//	}
-//}
+void Chapter::AddNextChapter(Chapter& chapter) 
+{
+	m_nextChapters.push_back(chapter);
+}
+void Chapter::Select(sf::RenderWindow& window)
+{
+	std::cin >> m_nextChapterIndex;
+	for (int i = 0; i < m_nextChapters.size(); i++) 
+	{
+		if (i == m_nextChapterIndex) 
+		{
+			m_nextChapters[i].Draw(window);
+		}
+		else 
+		{
+			m_text.setString("There is no chapter with that index");
+		}
+	}
+}
 ////returns the next chapter if there is one
 //Chapter& Chapter::GetNextChapter(int index)
 //{
@@ -69,3 +102,13 @@ void Chapter::Draw(sf::RenderWindow& window)
 //		return false;
 //	}
 //}
+bool Chapter::IsSelection()
+{
+	return m_isSelection;
+}
+bool Chapter::IsCombat()
+{
+	return m_isCombat;
+}
+
+#pragma endregion

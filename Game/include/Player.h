@@ -24,11 +24,10 @@ public:
 #pragma endregion
 #pragma region Methods
 
-	//Methods
 	void SetAttack(int attackPoint);
 	void SetAgility(int agilityPoints);
 	void SetGold(int goldAmmount);
-	void SetName();
+	//void SetName();
 	void SetPsi(int psiPoints);
 	int GetAgility()const;
 	int GetGold()const;

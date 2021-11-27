@@ -11,6 +11,7 @@ Combat::Combat(
 	int nextChapterIndex) : m_enemy(enemy), Chapter(spriteAdress, content)
 {
 	m_successScore = successScore;
+	m_isCombat = true;
 }
 
 #pragma endregion 
