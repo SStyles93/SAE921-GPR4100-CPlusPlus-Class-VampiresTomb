@@ -27,6 +27,11 @@ Chapter::Chapter(std::string spriteAdress, std::string content)
 void Chapter::SetContent(std::string content) 
 {
 	m_text.setString(m_content);
+	
+}
+void Chapter::AddContent(std::string content) 
+{
+	m_text.getString() + content;
 }
 void Chapter::SetFontSize(int size) 
 {
@@ -43,6 +48,14 @@ void Chapter::SetFontPosition(float xPos, float yPos)
 }
 
 //CHAPTER
+std::vector<Chapter> Chapter::GetNextChapters() 
+{
+	return m_nextChapters;
+}
+int Chapter::GetNextChapterIndex() 
+{
+	return m_nextChapterIndex;
+}
 void Chapter::SetSelection(bool b)
 {
 	m_isSelection = b;
@@ -59,7 +72,7 @@ void Chapter::SetCombat(bool b)
 void Chapter::Draw(sf::RenderWindow& window) 
 {
 	window.clear(sf::Color::Black);
-	m_sprite.setPosition(window.getSize().x * 0.25f, window.getSize().y * 1.0f);
+	m_sprite.setPosition(window.getSize().x * 0.28f, window.getSize().y * 0.9f);
 	window.draw(m_sprite);
 	m_text.setPosition(window.getSize().x * m_textPosition.x, window.getSize().y * m_textPosition.y);
 	window.draw(m_text);

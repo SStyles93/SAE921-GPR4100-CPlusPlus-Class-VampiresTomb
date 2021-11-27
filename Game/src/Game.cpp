@@ -30,7 +30,7 @@ int main()
 	//random seed
 	srand(time(nullptr));
 
-	//*****************************************************INIT*****************************************************
+	//*****************************************************INIT*******************************************************
 	Story story;
 	Player player("Hero", story.DiceRoll() + story.DiceRoll(), "No sprite");
 
@@ -39,8 +39,9 @@ int main()
 		"Vamipre's Tomb");
 	//Title.SetFontSize(80);
 	Title.SetFontSize(100);
-	Title.SetFontPosition(0.3f, 0.1f);
+	Title.SetFontPosition(0.35f, 0.1f);
 	story.AddChapter(Title);
+	//TODO: Replace currentChapter by the story chapter (pass by ref);
 	currentChapter = story.GetChapter(currentChapterIndex);
 	
 	//"Door": first selection
@@ -76,7 +77,7 @@ int main()
 		"You arrive in a boss fight", boss, 10, 10);
 	story.AddChapter(BossFight);
 
-//*****************************************************INPUTS*****************************************************
+//*****************************************************INPUTS**************************************************
 	
 	while (window.isOpen())
 	{
@@ -111,12 +112,19 @@ int main()
 			case sf::Event::KeyReleased:
 				if (event.key.code == sf::Keyboard::Enter)
 				{
-					if (gameStarted) break;
 //*****************************************************RENDER*****************************************************
+					if (gameStarted) break;
 					if (currentChapter.IsSelection())
 					{
-						//TODO: Launch a Selection input method to select Chapters& in the chapter vector
-						
+						std::cin >> currentChapter.m_nextChapterIndex;
+
+						for (int c = 0; c < currentChapter.m_nextChapters.size(); c++)
+						{
+							if (c == currentChapter.m_nextChapterIndex)
+							{
+								currentChapter.m_nextChapters[currentChapter.m_nextChapterIndex].Draw(window);
+							}
+						}						
 					}
 					else if (currentChapter.IsCombat()) 
 					{

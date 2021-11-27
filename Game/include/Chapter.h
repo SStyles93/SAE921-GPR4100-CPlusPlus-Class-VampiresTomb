@@ -8,8 +8,6 @@ protected:
 	std::string m_spriteAdress;
 	std::string m_content;
 
-	std::vector<Chapter> m_nextChapters;
-	int m_nextChapterIndex = 0;
 	bool m_isSelection = false;
 	bool m_isCombat = false;
 
@@ -19,6 +17,7 @@ protected:
 	sf::Font m_font;
 	sf::Texture m_texture; 
 	sf::Sprite m_sprite;
+
 	//text position in % of the screen Width x Height
 	sf::Vector2f m_textPosition = sf::Vector2f(0.25f, 0.9f);
 
@@ -26,21 +25,29 @@ protected:
 
 public:
 
+	std::vector<Chapter> m_nextChapters;
 	int m_chapterIndex = 0;
+	int m_nextChapterIndex = 0;
 
 #pragma region Constructor
+
 	Chapter();
 	Chapter(std::string spriteAdress, std::string content);
 
 #pragma endregion
 #pragma region Getter/Setter
 
+	std::vector<Chapter> GetNextChapters();
+	int GetNextChapterIndex();
+
 	void SetContent(std::string content);
+	void AddContent(std::string content);
 	void SetFontSize(int size);
 	void SetFontColor(sf::Color color);
 	void SetFontPosition(float xPos, float yPos);
 	void SetSelection(bool b);
 	void SetCombat(bool b);
+
 #pragma region Methods
 
 	void Select(sf::RenderWindow& window);
