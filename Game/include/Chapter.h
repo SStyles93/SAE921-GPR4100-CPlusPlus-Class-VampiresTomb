@@ -10,6 +10,7 @@ protected:
 
 	bool m_isSelection = false;
 	bool m_isCombat = false;
+	bool m_isEnd = false;
 
 #pragma region Graphical
 
@@ -50,12 +51,13 @@ public:
 
 #pragma region Methods
 
-	void Select(sf::RenderWindow& window);
+	Chapter Select(sf::RenderWindow& window);
 	void Draw(sf::RenderWindow& window);
 	void AddNextChapter(Chapter& chapter);
 	//Chapter& GetNextChapter(int index);
 	bool IsSelection();
 	bool IsCombat();
+	bool IsEnd();
 	
 #pragma endregion
 	

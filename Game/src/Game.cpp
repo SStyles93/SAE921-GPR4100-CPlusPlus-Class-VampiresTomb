@@ -11,17 +11,17 @@ void ClearConsole()
 #endif
 }
 
-bool gameStarted = true;
+bool gameStarted = false;
 
 int main()
 {
 	sf::Color backgroundColor(sf::Color::Blue);
 
-	Chapter currentChapter;
-	int currentChapterIndex = 1;
+
+
 
 	//*****************************************************SET-UP*****************************************************
-	
+
 	// Basic Setup of the window
 	sf::RenderWindow window(sf::VideoMode(1920, 1080), "Vamipre's Tomb");
 	// Vertical sync, framerate
@@ -32,6 +32,7 @@ int main()
 
 	//*****************************************************INIT*******************************************************
 	Story story;
+	Bag bag;
 	Player player("Hero", story.DiceRoll() + story.DiceRoll(), "No sprite");
 
 	//Title
@@ -41,40 +42,40 @@ int main()
 	Title.SetFontSize(100);
 	Title.SetFontPosition(0.35f, 0.1f);
 	story.AddChapter(Title);
+
 	//TODO: Replace currentChapter by the story chapter (pass by ref);
-	currentChapter = story.GetChapter(currentChapterIndex);
+	story.m_currentChapter = story.GetChapter(story.m_currentChapterIndex);
 	
 	//"Door": first selection
 	Chapter door("data/sprites/Background/1.jpg",
 		"You arrive in front of a door");
 	door.SetSelection(true);
-	story.AddChapter(door);
 
 	//"The hidden entrance": shortcut with "garlic"
 	Chapter trap("data/sprites/Background/Black.bmp",
 		"You find a little trap");
-	story.AddChapter(trap);
+	
 
 	//"House": is an "End" chapter
 	Chapter house
 	("data/sprites/Background/2.png",
 		"You arrive near a little house...");
-	story.AddChapter(house);
+	
 
 	//"Dungeon" is a combat
 	Chapter dungeon("data/sprites/Background/3.png",
 		"You arrive in a dungeon...");
-	story.AddChapter(dungeon);
 
 	door.AddNextChapter(trap);
 	door.AddNextChapter(house);
 	door.AddNextChapter(dungeon);
+	story.AddChapter(door);
 
 	//The Boss
 	Enemy boss("Vampire", 10, "data/sprites/Vampire/2.png");
 	//Boss fight
 	Combat BossFight("data/sprites/Background/4.png",
-		"You arrive in a boss fight", boss, 10, 10);
+		"You arrive in a boss fight", boss, player, 10, 10);
 	story.AddChapter(BossFight);
 
 //*****************************************************INPUTS**************************************************
@@ -113,43 +114,44 @@ int main()
 				if (event.key.code == sf::Keyboard::Enter)
 				{
 //*****************************************************RENDER*****************************************************
-					if (gameStarted) break;
-					if (currentChapter.IsSelection())
+					if (gameStarted)
 					{
-						std::cin >> currentChapter.m_nextChapterIndex;
 
-						for (int c = 0; c < currentChapter.m_nextChapters.size(); c++)
+						if (story.m_currentChapter.IsSelection())
+						{	
+							story.m_currentChapter = story.m_currentChapter.Select(window);
+						}
+						else if (story.m_currentChapter.IsCombat())
 						{
-							if (c == currentChapter.m_nextChapterIndex)
-							{
-								currentChapter.m_nextChapters[currentChapter.m_nextChapterIndex].Draw(window);
-							}
-						}						
+							//TODO: Launch a Combat selection input method to select between actions
+						}
+						else if (story.m_currentChapter.IsEnd()) 
+						{
+							std::cout << "You where killed\n";
+							//TODO : Method to kill player and explain why
+						}
+						else
+						{
+							//Normal case where there is only one nextChapter
+							story.m_currentChapterIndex++;
+							story.m_currentChapter = story.GetChapter(story.m_currentChapterIndex);
+							story.m_currentChapter.Draw(window);
+						}
 					}
-					else if (currentChapter.IsCombat()) 
-					{
-						//TODO: Launch a Combat selection input method to select between actions
-					}
-					else 
-					{
-						//Normal case where there is only one nextChapter
-						currentChapterIndex++;
-						currentChapter = story.GetChapter(currentChapterIndex);
-						currentChapter.Draw(window);
-					}	
 				}
-				break;
+					break;
 
 			default:
 				break;
 			}
 
+
 		}
 		
 		//First Draw of the game, displays Title
-		if (gameStarted) {
+		if (!gameStarted) {
 			Title.Draw(window);
-			gameStarted = false;
+			gameStarted = true;
 		}
 	}
 }

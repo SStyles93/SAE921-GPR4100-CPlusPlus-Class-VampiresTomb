@@ -19,20 +19,22 @@
 
 class Story 
 {
-private:
+protected:
 
 	std::map<int, Chapter> m_chapterMap;
-	Chapter m_currentChapter;
 	int m_chapterCount = 0;
-	int m_wantedChapterIndex = 0;
 
 public:
+
+	int m_wantedChapterIndex = 0;
+	int m_currentChapterIndex = 1;
+	Chapter m_currentChapter;
 
 #pragma region Constructor
 
 	Story();
 
-#pragma endregion 
+#pragma endregion
 #pragma region Methods
 	
 	void AddChapter(Chapter& chapter);

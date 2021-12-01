@@ -78,23 +78,22 @@ void Chapter::Draw(sf::RenderWindow& window)
 	window.draw(m_text);
 	window.display();
 }
-void Chapter::AddNextChapter(Chapter& chapter) 
+void Chapter::AddNextChapter(Chapter& chapter)
 {
 	m_nextChapters.push_back(chapter);
 }
-void Chapter::Select(sf::RenderWindow& window)
+Chapter Chapter::Select(sf::RenderWindow& window)
 {
 	std::cin >> m_nextChapterIndex;
+
 	for (int i = 0; i < m_nextChapters.size(); i++) 
 	{
 		if (i == m_nextChapterIndex) 
 		{
 			m_nextChapters[i].Draw(window);
+			return m_nextChapters[i];
 		}
-		else 
-		{
-			m_text.setString("There is no chapter with that index");
-		}
+		m_text.setString("There is no chapter with that index");
 	}
 }
 ////returns the next chapter if there is one
@@ -115,6 +114,10 @@ void Chapter::Select(sf::RenderWindow& window)
 //		return false;
 //	}
 //}
+
+#pragma endregion
+#pragma region Checkers
+
 bool Chapter::IsSelection()
 {
 	return m_isSelection;
@@ -122,6 +125,10 @@ bool Chapter::IsSelection()
 bool Chapter::IsCombat()
 {
 	return m_isCombat;
+}
+bool Chapter::IsEnd() 
+{
+	return m_isEnd;
 }
 
 #pragma endregion

@@ -1,6 +1,7 @@
 #pragma once
 #include "Chapter.h"
 #include "Enemy.h"
+#include "Player.h"
 
 class Combat : public Chapter
 {
@@ -8,6 +9,7 @@ protected:
 
 	int m_successScore;
 	Enemy& m_enemy;
+	Player& m_player;
 	
 public:
 
@@ -16,6 +18,7 @@ public:
 	Combat(const std::string spriteAdress,
 		const std::string content,
 		Enemy& enemy,
+		Player& player,
 		int successScore,
 		int nextChapterIndex);
 	
