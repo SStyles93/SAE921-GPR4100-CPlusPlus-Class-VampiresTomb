@@ -23,6 +23,12 @@ public:
 		int nextChapterIndex);
 	
 #pragma endregion 
+#pragma region Getter/Setter
+
+	Player GetPlayer();
+	Enemy GetEnemy();
+
+#pragma endregion
 #pragma region Methods
 	
 	void Battle(int diceRoll);

@@ -64,6 +64,10 @@ void Chapter::SetCombat(bool b)
 {
 	m_isCombat = b;
 }
+void Chapter::SetEnd(bool b) 
+{
+	m_isEnd = b;
+}
 
 #pragma endregion
 #pragma region Methods

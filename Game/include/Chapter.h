@@ -48,6 +48,7 @@ public:
 	void SetFontPosition(float xPos, float yPos);
 	void SetSelection(bool b);
 	void SetCombat(bool b);
+	void SetEnd(bool b);
 
 #pragma region Methods
 

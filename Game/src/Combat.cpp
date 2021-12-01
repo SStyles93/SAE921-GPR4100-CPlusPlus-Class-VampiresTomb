@@ -16,9 +16,19 @@ Combat::Combat(
 }
 
 #pragma endregion 
+#pragma region Getter/Setter
+
+Player Combat::GetPlayer() 
+{
+	return m_player;
+}
+Enemy Combat::GetEnemy() 
+{
+	return m_enemy;
+}
+
 #pragma region Methods
 
-//
 void Combat::Battle(int diceRoll)
 {
 	if (diceRoll >= m_successScore)

@@ -55,12 +55,11 @@ int main()
 	Chapter trap("data/sprites/Background/Black.bmp",
 		"You find a little trap");
 	
-
 	//"House": is an "End" chapter
 	Chapter house
 	("data/sprites/Background/2.png",
 		"You arrive near a little house...");
-	
+	house.SetEnd(true);
 
 	//"Dungeon" is a combat
 	Chapter dungeon("data/sprites/Background/3.png",
@@ -118,7 +117,11 @@ int main()
 					{
 
 						if (story.m_currentChapter.IsSelection())
-						{	
+						{
+							//EVENT TRY
+							/*if (event.key.code == sf::Keyboard::Num1) story.m_currentChapter.m_nextChapterIndex = 1;
+							if (event.key.code == sf::Keyboard::Num2) story.m_currentChapter.m_nextChapterIndex = 2;
+							if (event.key.code == sf::Keyboard::Num3) story.m_currentChapter.m_nextChapterIndex = 3;*/
 							story.m_currentChapter = story.m_currentChapter.Select(window);
 						}
 						else if (story.m_currentChapter.IsCombat())
